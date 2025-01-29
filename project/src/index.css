@@ -1,0 +1,98 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --pc-primary: #cca877;
+  --pc-primary-dark: #b89665;
+  --pc-secondary: #4a4f55;
+  --pc-warning: #f97316;
+  --pc-bg-light: #f3f4f6;
+  --pc-text: #1f2937;
+  --pc-border: #d1d5db;
+  --pc-focus-ring: rgba(204, 168, 119, 0.2);
+}
+
+.pension-calculator {
+  @apply text-gray-900 antialiased;
+  color: var(--pc-text);
+}
+
+.pension-calculator input[type='number']::-webkit-outer-spin-button,
+.pension-calculator input[type='number']::-webkit-inner-spin-button,
+.pension-calculator input[type='number'] {
+  -webkit-appearance: none;
+  margin: 0;
+  -moz-appearance: textfield !important;
+}
+
+.pension-calculator input[type='range'] {
+  height: 0.5rem;
+  width: 100%;
+  cursor: pointer;
+  appearance: none;
+  border-radius: 0.5rem;
+  background-color: var(--pc-bg-light);
+}
+
+.pension-calculator input[type='range']::-webkit-slider-thumb {
+  height: 1rem;
+  width: 1rem;
+  appearance: none;
+  border-radius: 9999px;
+  background-color: var(--pc-primary);
+}
+
+.pension-calculator input[type='range']::-moz-range-thumb {
+  height: 1rem;
+  width: 1rem;
+  appearance: none;
+  border-radius: 9999px;
+  background-color: var(--pc-primary);
+  border: 0;
+}
+
+.pension-calculator button {
+  background-color: var(--pc-primary);
+}
+
+.pension-calculator button:hover {
+  background-color: var(--pc-primary-dark);
+}
+
+.pension-calculator button:focus {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+  box-shadow: 0 0 0 2px var(--pc-focus-ring);
+}
+
+.pension-calculator input[type='text'],
+.pension-calculator input[type='number'] {
+  border-color: var(--pc-border);
+}
+
+.pension-calculator input[type='text']:focus,
+.pension-calculator input[type='number']:focus {
+  border-color: var(--pc-primary);
+  box-shadow: 0 0 0 2px var(--pc-focus-ring);
+}
+
+.pension-calculator .header {
+  background-color: var(--pc-secondary);
+}
+
+.pension-calculator .accent-text {
+  color: var(--pc-primary);
+}
+
+.pension-calculator .warning-scenario {
+  background-color: var(--pc-warning);
+}
+
+.pension-calculator .chosen-scenario {
+  background-color: var(--pc-secondary);
+}
+
+.pension-calculator .good-scenario {
+  background-color: var(--pc-primary);
+}
